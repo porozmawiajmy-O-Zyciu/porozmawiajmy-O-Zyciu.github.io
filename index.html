@@ -7,6 +7,54 @@
     <title>Document</title>
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <img src="materials/img/logo 2 done.png" alt="Logo">
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#home">Główna</a></li>
+                <li><a href="#about">O projekcie</a></li>
+                <li><a href="#team">Zespół</a></li>
+                <li><a href="#whatwedo">Co robimy</a></li>
+                <li><a href="#news">Aktualność</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="#social">Social Media</a></li>
+            </ul>
+        </nav>
+
+        <div class="icons">
+            <a href="#share" class="icon-link"><img src="materials/ico/share.png" alt="Share"></a>
+            <a href="#mail" class="icon-link"><img src="materials/ico/mail.png" alt="Email"></a>
+        </div>
+
+    </header>
     
+    <section class="content-section-1">
+        <div class="text-block">
+            <h1>Porozmawiajmy o Życiu</h1>
+            <p>Podnosimy Twoją Świadomość Prawną</p>
+            <a href="#" class="play-button" id="openModal">
+                <img src="materials/ico/play-button.png" alt="Play icon">
+            </a>
+        </div>
+        <div class="image-block">
+            <img src="materials/img/photo for 1 page.jpg" alt="Legal icons">
+        </div>
+    </section>
+    
+    <!-- Модальное окно для видео -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <iframe id="youtubeVideo" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+        </div>
+    </div>
+    
+    
+
+    <script src="skript.js"></script>
 </body>
 </html>
