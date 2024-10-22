@@ -7,9 +7,12 @@
     <title>Document</title>
 </head>
 <body>
+
+    <!-- Хедер для навігації по сайту -->
+    
     <header>
         <div class="logo">
-            <img src="materials/img/logo 2 done.png" alt="Logo">
+            <img src="Materials/img/logo 2 done.png" alt="Logo">
         </div>
 
         <nav>
@@ -25,36 +28,47 @@
         </nav>
 
         <div class="icons">
-            <a href="#share" class="icon-link"><img src="materials/ico/share.png" alt="Share"></a>
-            <a href="#mail" class="icon-link"><img src="materials/ico/mail.png" alt="Email"></a>
+            <a href="#share" class="icon-link"><img src="Materials/ico/share.png" alt="Share"></a>
+            <a href="#mail" class="icon-link"><img src="Materials/ico/mail.png" alt="Email"></a>
         </div>
 
     </header>
     
+
+    <!-- 1 Секція -->
     <section class="content-section-1">
         <div class="text-block">
-            <h1>Porozmawiajmy o Życiu</h1>
-            <p>Podnosimy Twoją Świadomość Prawną</p>
+            <h1>Porozmawiajmy o<br>życiu</h1>
+            <p>Podnosimy Twoją Świadomość <br>Prawną</p>
             <a href="#" class="play-button" id="openModal">
-                <img src="materials/ico/play-button.png" alt="Play icon">
+                <img src="Materials/ico/play-button.png" alt="Play icon">
             </a>
         </div>
         <div class="image-block">
-            <img src="materials/img/photo for 1 page.jpg" alt="Legal icons">
+            <img src="Materials/img/photo for 1 page.jpg" alt="Legal icons">
         </div>
     </section>
     
-    <!-- Модальное окно для видео -->
+    <!-- 2 Секція -->
+
+
+
+    
+
+    <!-- Модальне вікно для локального відео -->
+    
+    
     <div id="videoModal" class="modal">
         <div class="modal-content">
             <span class="close" id="closeModal">&times;</span>
-            <iframe id="youtubeVideo" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            
+            <!-- Вставка відео -->
+            <video id="localVideo" width="560" height="315" controls>
+                <source src="Materials/video/The Scientist - Coldplay ｜ Alex Goot & Jada Facer.mp4" type="video/mp4">
+                
+            </video>
         </div>
     </div>
     
-    
-
     <script src="skript.js"></script>
 </body>
 </html>
