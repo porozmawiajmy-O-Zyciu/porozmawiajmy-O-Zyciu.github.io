@@ -49,82 +49,223 @@ nav ul li a:hover{
     height: 24px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
 /* first section */
 
-.content-section-1{
+.content-section-1 {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Колонка для мобільних пристроїв */
+    justify-content: center;
     align-items: center;
-    padding: 40px; 
+    padding: 40px 20px;
     background-color: #f8b3c1;
+    
+    gap: 20px; /* Відступ між блоками */
 }
 
-.text-block{
-    flex: 1;
-    padding: 40px; 
+.text-block {
+    text-align: center; /* Вирівнювання тексту по центру для кращого вигляду */
+    padding: 20px;
+    max-width: 800px; /* Максимальна ширина для тексту */
+    align-items: center;
+    margin-left: 200px;
 }
 
-.text-block h1{
+.text-block h1 {
     font-family: 'Arial', sans-serif;
     font-size: 36px;
     font-weight: bold;
     color: #000;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
-.text-block p{
-    font-size: 18px;
+.text-block p {
+    font-size: 20px;
     margin-top: 10px;
+    line-height: 1.5; /* Збільшений міжрядковий інтервал для кращого читання */
+    text-align: center;
 }
 
-.play-button{
+.play-button {
     display: inline-block;
     margin-top: 20px;
+    margin-left: 140px;
     padding: 10px;
+    cursor: pointer; /* Вказівник миші, щоб виглядало як клікабельний елемент */
+    
 }
 
-.play-button img{
-    width: 70px;
+.play-button img {
+    width: 80px; /* Зменшений розмір кнопки для більш акуратного вигляду */
+   
 }
 
-.image-block{
+.image-block {
     flex: 1;
+    display: flex;
+    justify-content: center; /* Вирівнювання зображення по центру */
 }
 
-.image-block img{
+.image-block img {
     width: 100%;
     max-width: 600px;
     height: auto;
+    border-radius: 10px; /* Закруглені кути для більш сучасного вигляду */
 }
 
-/* Модальное окно */
+/* Для більших екранів */
+@media (min-width: 768px) {
+    .content-section-1 {
+        flex-direction: row; /* Розташування елементів у рядок на великих екранах */
+        justify-content: space-between;
+        gap: 50px;
+    }
 
+    .text-block {
+        text-align: left; /* Вирівнювання тексту по лівому краю на великих екранах */
+        padding-left: 60px; /* Збільшений відступ на великих екранах */
+    }
+
+    .text-block h1 {
+        font-size: 48px; /* Більший розмір заголовка на великих екранах */
+    }
+
+    .text-block p {
+        font-size: 24px; /* Більший розмір тексту на великих екранах */
+    }
+
+    .play-button img {
+        width: 100px; /* Збільшений розмір кнопки відтворення на великих екранах */
+    }
+}
+
+
+
+
+/* second section */
+
+
+
+
+
+
+
+
+
+/* Модальне вікно - завжди приховане за замовчуванням */
 .modal {
-    display: none; /* По умолчанию скрыто */
+    display: none; /* Модальне вікно приховане за замовчуванням */
     position: fixed;
     z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); 
+    background-color: rgba(0, 0, 0, 0.8); /* Напівпрозорий чорний фон */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
 }
 
+/* Контент модального вікна - квадратний */
 .modal-content {
     position: relative;
-    margin: 10% auto;
-    padding: 20px;
-    width: 80%;
-    max-width: 640px;
     background-color: #fff;
+    padding: 30px;
+    border-radius: 15px; /* Закруглені кути */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Тінь */
+    width: 90vw; /* Ширина вікна 90% від ширини вікна браузера */
+    height: 90vw; /* Висота дорівнює ширині для квадратного вигляду */
+    max-width: 600px; /* Максимальна ширина */
+    max-height: 600px; /* Максимальна висота */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: modalFadeIn 0.4s;
 }
 
+/* Анімація появи модального вікна */
+@keyframes modalFadeIn {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Стиль для кнопки закриття */
 .close {
     position: absolute;
-    top: 10px;
+    top: 15px;
     right: 20px;
-    font-size: 24px;
+    font-size: 30px;
+    font-weight: bold;
     cursor: pointer;
-    color: #000;
+    color: #aaa;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #000; /* Темніша кнопка при наведенні */
+}
+
+/* Відео в модальному вікні */
+.modal-content video {
+    width: 100%;
+    height: 100%; /* Відео заповнює всю площу модального вікна */
+    border-radius: 10px; /* Закруглені кути відео */
+    object-fit: cover; /* Забезпечує правильну пропорцію відео */
+}
+
+
+/* Стиль для кнопки закриття */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #aaa;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #000; /* Темніша кнопка при наведенні */
+}
+
+/* Відео в модальному вікні */
+.modal-content video {
+    width: 100%;
+    border-radius: 10px; /* Закруглені кути відео */
+}
+
+/* Анімація для плавного зникнення модального вікна */
+.modal.fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Для великого екрана */
+@media (min-width: 768px) {
+    .modal-content {
+        max-width: 60%; /* Зменшення ширини на великих екранах */
+    }
 }
 
 
