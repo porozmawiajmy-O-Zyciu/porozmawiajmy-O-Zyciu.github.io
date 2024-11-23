@@ -269,3 +269,98 @@ nav ul li a:hover{
 }
 
 
+
+
+
+/* Раздел 2  ЛЕХА*/
+
+
+/* second section */
+
+.content-section-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff8080;
+    height: 100vh;
+}
+
+.image-judge img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    padding: 40px;
+}
+
+.text-block-2 {
+    background-color: black;
+    color: white;
+    flex: 1;
+    padding: 40px;
+    max-width: 600px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.text-block-2 h1 {
+    text-align: center;
+    font-size: 36px;
+    font-family: "Arial", sans-serif;
+}
+
+/* fourth section */
+
+.content-section-4 {
+    text-align: center;
+    display: flex;
+    height: 100vh;
+    justify-content: space-between;
+    background-color: #e3a762;
+    flex-direction: column; /* Umożliwia umieszczanie elementów w kolumnach */
+}
+
+.heading{
+    font-size: 36px
+}
+
+.team-container{
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden; /*chowa zdjęcie */
+}
+
+.team-group{
+    display: flex; /*ustaiwa elementy w rząd*/
+    /* justify-content: space-between; równe odstępy */
+    transition: transform 0.5s ease-in-out; /*przesówa zdjęcia*/
+}
+
+.profile-image{
+    min-width: 100%;
+}
+
+.profile-image img{
+    width: 100%;
+    height: auto;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
